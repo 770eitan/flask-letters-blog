@@ -101,7 +101,7 @@ body {
   --text-color: rgb(17, 20, 17);
   --button-bg: rgb(255, 0, 0);
   --nav-bg: rgba(0, 160, 247, 0.7);
-  --nav-bg-ff: rgba(0, 166, 255, 0.9);
+  --nav-bg-ff: rgba(176, 176, 176, 0.9);
   --link-hover-color: rgb(16, 56, 158);
   --button-bg-hover: rgb(226, 226, 226);
   --borders: rgb(36, 116, 248) solid 2px;
@@ -187,6 +187,8 @@ nav li:hover {
   text-decoration: none;
   font-size: var(--font-l);
   background-color: var(--button-bg);
+  border-color: var(--secondary);
+  color: white;
 }
 
 .btn:hover {
@@ -323,12 +325,6 @@ nav li:hover {
     header {
       backdrop-filter: none;
       -webkit-backdrop-filter: none;
-    }
-
-    .nav{
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-      background: rgba(104, 197, 248, .6);
     }
   }
 }
