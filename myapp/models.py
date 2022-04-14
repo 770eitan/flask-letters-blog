@@ -36,15 +36,15 @@ class BlogPost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     title = db.Column(db.String(140), nullable=False)
-    text = db.Column(db.Text, nullable=False)
+    notes = db.Column(db.Text, nullable=False)
     value= db.Column(db.Integer, nullable=False)
 
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
 
-    def __init__(self, title, text, user_id, value):
+    def __init__(self, title, notes, user_id, value):
         self.title = title
-        self.text = text
+        self.notes = notes
         self.value = value
         self.user_id = user_id
     

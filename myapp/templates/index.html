@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="jumbotron">
-        <h1>Blog</h1>
+        <h1>Letters</h1>
     </div>
     <div class="container">
         {% for post in blog_posts.items %}
@@ -12,7 +12,7 @@
                         <a href="{{url_for('users.user_posts', username=post.author.username)}}">Written by: {{post.author.username}}</a>
                     </h2>
                     <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
-                    <a class="btn btn-primary" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">Read Blog Post</a>
+                    <a class="btn btn-primary" href="{{url_for('blog_posts.blog_post', blog_post_id=post.id)}}">Look at Letter</a>
                 </div>
             </div>
         {% endfor %}
