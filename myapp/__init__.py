@@ -1,4 +1,4 @@
-# myapp/__init__.py 
+myapp/__init__.py 
 
 from flask import Flask 
 from flask_sqlalchemy import SQLAlchemy
@@ -18,9 +18,8 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 
 # set up connection to db
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/myletters"
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/myletters"
 
 db = SQLAlchemy(app)
 db.init_app(app)
